@@ -508,6 +508,10 @@ a {
   border-radius: 4px;
   border: 1px solid transparent;
   border: 1px solid #e7e9fc;
+  color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-list-tools:hover,
 .button-list-tools:focus {
@@ -523,11 +527,13 @@ a {
 }
 .portfolio-link-list {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link-list:hover,
 .portfolio-link-list:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 .possibilities-list {
   width: calc((100% - 48px) / 3);
@@ -627,12 +633,12 @@ a {
 .social-list-icon-tools:focus {
   background-color: #31d0aa;
 }
-/*=====backdrop- footer==== */
+/*=====backdrop-modal-footer==== */
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100|%;
+  width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -672,10 +678,32 @@ a {
 .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
-  background-color: #404bbf;
-  border: none;
+
   fill: #ffffff;
 }
 .close-button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.hidden-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--background-light: #f4f4fd;);
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
