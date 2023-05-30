@@ -58,7 +58,8 @@ a {
 }
 
 /*  ====================Body-page===================== */
-.body {
+
+*body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #ffffff;
@@ -127,7 +128,7 @@ a {
 
   color: var(--title-color);
   position: relative;
-  color: #404bbf;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover:after,
@@ -365,7 +366,7 @@ a {
   padding: 188px 0;
 }
 .title-service {
-  max-width: 496px;
+  max-width: 511px;
   margin: 0 auto;
   margin-bottom: 48px;
 }
